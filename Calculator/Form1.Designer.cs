@@ -46,7 +46,7 @@
             btnMinus = new Button();
             btnmultiply = new Button();
             btnDivide = new Button();
-            lblExpresion = new Label();
+            lblExpression = new Label();
             lblOutput = new Label();
             lblAnswer = new Label();
             SuspendLayout();
@@ -62,6 +62,7 @@
             btnDot.TabStop = false;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
+            btnDot.Click += btnDot_Click;
             // 
             // btn0
             // 
@@ -73,6 +74,7 @@
             btn0.TabStop = false;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
+            btn0.Click += btnNumber_Click;
             // 
             // btnAns
             // 
@@ -84,6 +86,7 @@
             btnAns.TabStop = false;
             btnAns.Text = "=";
             btnAns.UseVisualStyleBackColor = true;
+            btnAns.Click += btnAns_Click;
             // 
             // btn1
             // 
@@ -95,6 +98,7 @@
             btn1.TabStop = false;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btnNumber_Click;
             // 
             // btn2
             // 
@@ -106,6 +110,7 @@
             btn2.TabStop = false;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btnNumber_Click;
             // 
             // btn3
             // 
@@ -117,6 +122,7 @@
             btn3.TabStop = false;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btnNumber_Click;
             // 
             // btn4
             // 
@@ -128,6 +134,7 @@
             btn4.TabStop = false;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btnNumber_Click;
             // 
             // btn5
             // 
@@ -139,6 +146,7 @@
             btn5.TabStop = false;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btnNumber_Click;
             // 
             // btn6
             // 
@@ -150,6 +158,7 @@
             btn6.TabStop = false;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btnNumber_Click;
             // 
             // btn7
             // 
@@ -161,6 +170,7 @@
             btn7.TabStop = false;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btnNumber_Click;
             // 
             // btn8
             // 
@@ -172,6 +182,7 @@
             btn8.TabStop = false;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btnNumber_Click;
             // 
             // btn9
             // 
@@ -183,6 +194,7 @@
             btn9.TabStop = false;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btnNumber_Click;
             // 
             // btnClear
             // 
@@ -194,6 +206,7 @@
             btnClear.TabStop = false;
             btnClear.Text = "CLEAR";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnClearEntry
             // 
@@ -205,6 +218,7 @@
             btnClearEntry.TabStop = false;
             btnClearEntry.Text = "CE";
             btnClearEntry.UseVisualStyleBackColor = true;
+            btnClearEntry.Click += btnClearEntry_Click;
             // 
             // btnAdd
             // 
@@ -216,6 +230,7 @@
             btnAdd.TabStop = false;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += operationBtn_Click;
             // 
             // btnMinus
             // 
@@ -227,6 +242,7 @@
             btnMinus.TabStop = false;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += operationBtn_Click;
             // 
             // btnmultiply
             // 
@@ -238,6 +254,7 @@
             btnmultiply.TabStop = false;
             btnmultiply.Text = "x";
             btnmultiply.UseVisualStyleBackColor = true;
+            btnmultiply.Click += operationBtn_Click;
             // 
             // btnDivide
             // 
@@ -249,49 +266,52 @@
             btnDivide.TabStop = false;
             btnDivide.Text = "÷";
             btnDivide.UseVisualStyleBackColor = true;
+            btnDivide.Click += operationBtn_Click;
             // 
-            // lblExpresion
+            // lblExpression
             // 
-            lblExpresion.BackColor = Color.White;
-            lblExpresion.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            lblExpresion.Location = new Point(34, 52);
-            lblExpresion.Name = "lblExpresion";
-            lblExpresion.Size = new Size(374, 54);
-            lblExpresion.TabIndex = 1;
-            lblExpresion.Text = "expression";
-            lblExpresion.TextAlign = ContentAlignment.BottomRight;
+            lblExpression.BackColor = Color.White;
+            lblExpression.Font = new Font("Cascadia Mono", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblExpression.Location = new Point(34, 52);
+            lblExpression.Name = "lblExpression";
+            lblExpression.Size = new Size(374, 54);
+            lblExpression.TabIndex = 1;
+            lblExpression.Text = "expression";
+            lblExpression.TextAlign = ContentAlignment.BottomRight;
             // 
             // lblOutput
             // 
             lblOutput.BackColor = Color.White;
-            lblOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOutput.Font = new Font("Cascadia Mono", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblOutput.ForeColor = SystemColors.ControlDarkDark;
             lblOutput.Location = new Point(34, 106);
             lblOutput.Name = "lblOutput";
             lblOutput.Size = new Size(374, 34);
             lblOutput.TabIndex = 1;
             lblOutput.Text = "output";
-            lblOutput.TextAlign = ContentAlignment.TopRight;
+            lblOutput.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblAnswer
             // 
             lblAnswer.BackColor = Color.White;
-            lblAnswer.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnswer.Font = new Font("Cascadia Mono", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnswer.ForeColor = Color.Black;
             lblAnswer.Location = new Point(34, 52);
             lblAnswer.Name = "lblAnswer";
             lblAnswer.Size = new Size(374, 88);
-            lblAnswer.TabIndex = 1;
+            lblAnswer.TabIndex = 2;
             lblAnswer.Text = "answer";
-            lblAnswer.TextAlign = ContentAlignment.BottomRight;
+            lblAnswer.TextAlign = ContentAlignment.MiddleRight;
+            lblAnswer.Visible = false;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(446, 503);
-            Controls.Add(lblOutput);
             Controls.Add(lblAnswer);
-            Controls.Add(lblExpresion);
+            Controls.Add(lblOutput);
+            Controls.Add(lblExpression);
             Controls.Add(btnDivide);
             Controls.Add(btnClearEntry);
             Controls.Add(btnmultiply);
@@ -315,6 +335,7 @@
             MinimizeBox = false;
             Name = "frmMain";
             Text = "Calculator";
+            Load += frmMain_Load;
             ResumeLayout(false);
         }
 
@@ -338,7 +359,7 @@
         private Button btnMinus;
         private Button btnmultiply;
         private Button btnDivide;
-        private Label lblExpresion;
+        private Label lblExpression;
         private Label lblOutput;
         private Label lblAnswer;
     }
